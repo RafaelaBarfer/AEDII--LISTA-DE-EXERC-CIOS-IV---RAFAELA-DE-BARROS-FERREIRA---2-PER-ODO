@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main (){
+	
+	int array [5]={2,4,6,8,10};
+	int num, inicio = 0, fim = 4, meio, achei = 0;
+	
+	printf ("Digite um numero de 1 a 10 e diremos se ele esta na nossa lista. ");
+	scanf ("%d",&num);
+	
+	while (inicio<=fim){meio = (inicio+fim)/2;
+	
+	if (array [meio]==num){
+		printf ("O numero foi encontrado na posicao %d",meio +1);
+		
+		achei = 1;
+		break;
+	}
+	else if (array[meio]>num){
+	fim = meio -1;
+	
+	}else {
+		inicio=meio +1;
+	}
+	}
+	if (!achei){
+		printf ("O numero nao foi encontrado na lista.");
+	}
+	
+	
+	
+	return 0;
+}
