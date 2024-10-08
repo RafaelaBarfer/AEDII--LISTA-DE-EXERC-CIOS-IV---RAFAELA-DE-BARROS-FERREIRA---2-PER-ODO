@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main (){
+	
+	double array [7]={10.00,4.00,8.00,2.00,5.00,12.00,7.00};
+	int i, j, chave;
+	
+	for (i=1;i<7;i++){
+		chave = array [i];
+		j = i - 1;
+		
+		while (j >= 0 && array [j]> chave ){
+		array [j+1]= array [j];
+		j--	;
+		}
+		array [j + 1] = chave;
+	}
+	
+	printf ("Precos organizados: ");
+	
+	for (i=0;i<7;i++){
+		printf ("%2.f.00 R$",array [i]);
+		printf ("\n");
+	}
+	
+	
+	return 0;
+}
