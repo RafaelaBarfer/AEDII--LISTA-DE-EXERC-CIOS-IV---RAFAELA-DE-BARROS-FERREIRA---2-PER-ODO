@@ -1,0 +1,34 @@
+
+#include <stdio.h>
+
+int main (){
+	
+double array [5] = {6,2.8,4,7,10};
+int i,j, maior,temp;
+
+for (i=0;i<4;i++){
+	 maior = i;
+	 
+	 for (j=i+1;j<5;j++){
+	 	if (array [j]> array [maior]){
+		 maior= j;
+		 }
+	 }
+	 
+	 if (maior != i){
+	 	temp= array [i];
+	 	array [i]=array [maior];
+	 	array [maior]=temp;
+	 	
+	 }
+}
+
+printf ("Resultado das notas em ordem decrescente: \n ");
+for (i=0;i<5;i++){
+	printf ("%2.f \n",array[i]);
+}
+
+	
+return 0;
+}
+
